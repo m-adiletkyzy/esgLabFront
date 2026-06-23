@@ -1,0 +1,367 @@
+<<<<<<< HEAD
+.footer {
+  background: #f8f9fb;
+  border-top: 1px solid #e8ecf1;
+  padding: 60px 0 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  &__col--brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2b4a;
+    margin: 0;
+  }
+
+  &__brand-text {
+    font-size: 14px;
+    color: #5a6a7e;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  &__social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #d0d5dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a2b4a;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+      background: #1a2b4a;
+      border-color: #1a2b4a;
+      color: #fff;
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a2b4a;
+    margin: 0 0 18px;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li a {
+      font-size: 14px;
+      color: #5a6a7e;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #1a2b4a;
+      }
+    }
+  }
+
+  &__contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #5a6a7e;
+
+      svg {
+        color: #5a6a7e;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      a {
+        color: #5a6a7e;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1a2b4a;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #e8ecf1;
+
+    span {
+      font-size: 13px;
+      color: #8a9ab0;
+    }
+
+    &-links {
+      display: flex;
+      gap: 24px;
+
+      a {
+        font-size: 13px;
+        color: #5a6a7e;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1a2b4a;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+
+    &-links {
+      justify-content: center;
+    }
+  }
+}
+=======
+.footer {
+  background: #f8f9fb;
+  border-top: 1px solid #e8ecf1;
+  padding: 60px 0 0;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+
+  &__col--brand {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a2b4a;
+    margin: 0;
+  }
+
+  &__brand-text {
+    font-size: 14px;
+    color: #5a6a7e;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 4px;
+  }
+
+  &__social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1.5px solid #d0d5dd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a2b4a;
+    transition: all 0.2s ease;
+    text-decoration: none;
+
+    &:hover {
+      background: #1a2b4a;
+      border-color: #1a2b4a;
+      color: #fff;
+    }
+  }
+
+  &__heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a2b4a;
+    margin: 0 0 18px;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    li a {
+      font-size: 14px;
+      color: #5a6a7e;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #1a2b4a;
+      }
+    }
+  }
+
+  &__contacts {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14px;
+      color: #5a6a7e;
+
+      svg {
+        color: #5a6a7e;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      a {
+        color: #5a6a7e;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1a2b4a;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid #e8ecf1;
+
+    span {
+      font-size: 13px;
+      color: #8a9ab0;
+    }
+
+    &-links {
+      display: flex;
+      gap: 24px;
+
+      a {
+        font-size: 13px;
+        color: #5a6a7e;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #1a2b4a;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .footer__main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer {
+    padding: 40px 0 0;
+  }
+
+  .footer__main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+
+    &-links {
+      justify-content: center;
+    }
+  }
+}
+>>>>>>> origin/fix/page-background-layouts

@@ -1,0 +1,21 @@
+body,
+html {
+  font: 18px / 1.3 Matter, Helvetica Neue, Arial, Helvetica, sans-serif;
+}
+.App {
+  background: linear-gradient(
+      #F2F6FA,
+      #F2F6FA
+    ),
+    url("./img/cloud-bottom-light.png");
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+  min-height: 100vh;
+  width: 100%;
+  @media (max-width: 1024px) {
+    background-size: contain;
+    background-position: top;
+    background-attachment: scroll;
+  }
+}
