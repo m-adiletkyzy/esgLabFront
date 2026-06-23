@@ -47,7 +47,7 @@ const Footer = () => {
             <h4 className="footer__heading">{t("footer.directions")}</h4>
             <ul className="footer__links">
               <li><Link to="/esg-campus">ESG Campus</Link></li>
-              <li><Link to="/esg-lab">ESG Lab</Link></li>
+              <li><Link to="/esg-center">ESG Center</Link></li>
               <li><Link to="/news">{t("footer.subscribe")}</Link></li>
               <li><Link to="/news">{t("footer.news_archive")}</Link></li>
             </ul>
