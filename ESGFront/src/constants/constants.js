@@ -14,7 +14,7 @@ export const links = [
     {path: "/about", label: "about"},
 <<<<<<< HEAD
     {path: "/esg-campus", label: "ESG Campus"},
-    {path: "/esg-lab", label: "ESG Lab"},
+    {path: "/esg-center", label: "ESG Center"},
     {path: "/course", label: "education"},
     {path: "/news", label: "news"},
 =======
