@@ -1,0 +1,168 @@
+// .card {
+//   padding: 20px;
+//   margin-bottom: 40px;
+//   width: 360px;
+//   background-color: white;
+//   border-radius: 8px;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   overflow: hidden;
+//   text-align: center;
+//   transition: box-shadow 0.5s ease;
+
+//   &:hover {
+//     box-shadow: 0 4px 8px rgba(0, 0, 139, 0.2);
+//   }
+
+//   &-image {
+//     object-fit: cover;
+//     background-size: cover;
+//     background-position: center;
+//     width: 314px;
+//     height: 300px;
+//   }
+
+//   &-content {
+//     font-size: 18px;
+//     padding: 16px;
+//     padding-left: 0px;
+//     align-self: flex-start;
+//     flex-grow: 1;
+//   }
+
+//   &-title {
+//     font-size: 1.25rem;
+//     margin-bottom: 8px;
+//   }
+
+//   &-description {
+//     font-size: 1rem;
+//     color: #555;
+//     margin-bottom: 16px;
+//   }
+
+//   &-button {
+//     font-size: 14px;
+//     background-color: white;
+//     border: none;
+//     border: 1px solid #007fa3;
+//     border-radius: 20px;
+//     font-weight: 700;
+//     color: #323232;
+//     cursor: pointer;
+//     padding: 8px 16px;
+//     text-transform: uppercase;
+//     transition: background-color 0.3s ease;
+//     align-self: flex-start;
+//     display: flex;
+//     margin-top: auto;
+//     &:hover {
+//       color: white;
+//       background-color: #007fa3;
+//     }
+//   }
+// }
+.course-content {
+  font-family: "Adelle Sans", Helvetica, Arial, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Три колонки по умолчанию */
+  gap: 40px; /* Расстояние между карточками */
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  width: 100%; /* Ширина 90% от родительского контейнера */
+  margin: 0 auto; /* Центрирование контейнера */
+}
+
+/* Адаптивные настройки */
+@media (min-width: 1200px) {
+  .course-content {
+    grid-template-columns: repeat(3, 1fr); /* Три колонки для больших экранов */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .course-content {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Две колонки для планшетов и маленьких десктопов */
+  }
+}
+
+@media (max-width: 767px) {
+  .cardd-title {
+    text-align: center;
+  }
+  .cardd-description {
+    text-align: center;
+  }
+  .course-content {
+    grid-template-columns: 1fr; /* Одна колонка для мобильных устройств */
+  }
+}
+
+.cardd {
+  background-color: white;
+  padding: 20px;
+  width: 100%; /* Полная ширина колонки */
+  height: 100%; /* Высота карточки */
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left; /* Выравнивание текста по левому краю */
+  transition: box-shadow 0.5s ease, transform 0.3s ease, filter 0.3s ease; /* Добавлен transition для transform и filter */
+  display: flex;
+  flex-direction: column;
+  text-decoration: none; /* Убираем подчеркивание */
+  color: inherit; /* Наследуем цвет */
+}
+
+.cardd:hover {
+  box-shadow: 0 0 30px rgba(26, 115, 232, 0.5);
+}
+
+.cardd-image {
+  object-fit: cover;
+  width: 100%; /* Ширина изображения */
+  height: 300px; /* Высота изображения */
+}
+
+.cardd-content {
+  font-size: 18px;
+  padding: 16px;
+  padding-left: 0px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяет пространство между элементами */
+}
+
+.cardd-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  color: #003366;
+}
+.cardd-description {
+  font-size: 0.92rem;
+  color: #003366;
+  margin-bottom: 12px;
+}
+
+.cardd-button {
+  font-size: 14px;
+  background-color: #00acef;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: auto;
+
+  &:hover {
+    background-color: #039cd8;
+    transform: scale(1.05); /* Легкое увеличение кнопки */
+  }
+}

@@ -1,0 +1,93 @@
+.content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("../../img/cloud-bottom-light.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    h1 {
+        margin: 0;
+    }
+
+    &__search {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 0 20px;
+    }
+
+
+    &__input {
+        width: 400px;
+        padding: 8px 36px 8px 25px;
+        border-radius: 6px;
+        font-size: 16px;
+        outline: none;
+        border: 1px solid gainsboro;
+        background-image: url("../../img/search-icon.png");
+        background-repeat: no-repeat;
+        background-size: 13px;
+        background-position: 5px center;
+       
+
+
+    }
+
+    &__input:focus {
+        border-color: #4DA8DA;
+        outline: none;
+    }
+
+    &__sorts {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .select-wrapper {
+        position: relative;
+        width: 220px;
+
+        select {
+            width: 100%;
+            padding: 10px 36px 10px 12px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            background-color: #fff;
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+
+            &:focus {
+                border-color: #4DA8DA;
+                outline: none;
+
+            }
+        }
+
+        &::after {
+            content: "";
+            background-image: url('../../img/down-arrow.png'); // или SVG иконка
+            background-repeat: no-repeat;
+            background-size: 12px;
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            pointer-events: none;
+        }
+    }
+    .main-course {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+        padding: 20px;
+    }
+
+}

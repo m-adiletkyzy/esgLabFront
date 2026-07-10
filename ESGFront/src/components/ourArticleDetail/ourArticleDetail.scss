@@ -1,0 +1,249 @@
+.paragraphn {
+  background: url("../../img/news_custom.png") no-repeat center/cover;
+  border-radius: 0 0 40px 40px;
+  min-height: 330px;
+  color: rgb(0, 51, 102);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+
+  .h2 {
+    font-size: 4rem;
+    font-family: "Adelle Sans", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    text-align: left;
+    padding-left: 6rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .paragraphn {
+    min-height: 250px;
+    padding: 15px;
+
+    .hero-b-content-title-only {
+      padding: 100px 0 60px;
+    }
+
+    .h2 {
+      font-size: 3.5rem;
+      padding-left: 4rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .paragraphn {
+    min-height: 200px;
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+
+    .hero-b-content-title-only {
+      padding: 80px 0 40px;
+    }
+
+    .h2 {
+      font-size: 2.8rem;
+      padding-left: 2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraphn {
+    min-height: 150px;
+    padding: 5px;
+
+    .hero-b-content-title-only {
+      padding: 60px 0 30px;
+    }
+
+    .h2 {
+      font-size: 1.6rem;
+      padding-left: 0rem;
+      text-align: start;
+    }
+  }
+  .c-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.c-section {
+  padding: 3rem 0;
+  background-color: #f9fbfc;
+
+  &--splashes {
+    background-color: #ffffff;
+  }
+
+  &--bottom-alt {
+    border-bottom: 1px solid #e1e4e8;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #063956;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    line-height: 1.4;
+    word-break: break-word;
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+}
+
+.o-duo {
+  display: flex;
+  gap: 2rem;
+  &--detail {
+    align-items: flex-start;
+  }
+
+  &__item {
+    flex: 1;
+
+    &--sticky {
+      position: sticky;
+      top: 100px;
+      bottom: 20px; // Добавляем нижнюю границу
+      max-width: 450px;
+      width: 100%;
+      align-self: flex-start;
+      height: fit-content; // Высота по содержимому
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .o-duo {
+    flex-direction: column;
+
+    &__item--sticky {
+      position: static;
+      max-width: 100%;
+    }
+  }
+}
+
+.c-detail-banner__image {
+  display: block;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.is-quarantine {
+  margin: 2rem auto 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgb(6, 57, 86);
+}
+
+.c-info-card {
+  width: 100%;
+  background-color: rgb(243, 245, 247);
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+
+  &__item {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(6, 57, 86, 0.2);
+    padding: 20px 0;
+    flex-wrap: wrap;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li:not(:last-child) {
+      border-bottom: 1px solid #dce2e6;
+    }
+  }
+
+  &__label {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #153f59;
+    margin-bottom: 0;
+  }
+
+  &__text {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #153f59;
+
+    a {
+      color: #004b69;
+      text-decoration: underline;
+
+      &:hover {
+        color: #002f42;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .paragraphn {
+    min-height: 150px;
+    padding: 5px;
+
+    .hero-b-content-title-only {
+      padding: 60px 0 30px;
+    }
+
+    .h2 {
+      font-size: 1.6rem;
+      padding-left: 0rem;
+      text-align: start;
+    }
+  }
+  .c-section h2 {
+    font-size: 1.2rem;
+  }
+  .is-quarantine {
+    font-size: 1rem;
+  }
+  .c-info-card {
+    padding: 2rem 2rem;
+  }
+  .o-duo__item--sticky {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .c-info-card__label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #153f59;
+    margin-bottom: 0;
+  }
+  .c-info-card__text {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #153f59;
+  }
+  .o-duo {
+    display: flex;
+    gap: 1rem;
+  }
+}

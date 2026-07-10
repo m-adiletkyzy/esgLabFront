@@ -1,0 +1,622 @@
+.esg {
+  background-color: #FFFFFF;
+  .app {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    min-height: 565px;
+    display: flex;
+    align-items: center;
+    padding: 60px 0;
+    background-color: #0d2d6b;
+    border-radius: 20px;
+    margin: 20px 115px;
+
+    @media (max-width: 768px) {
+      padding: 40px 0;
+      border-radius: 14px;
+    }
+  }
+
+  .content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    // padding: 0 20px;
+    gap: 100px;
+    padding: 10px 10px;
+  
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 32px;
+      padding: 0 24px;
+    }
+  }
+
+  // ─── ЛЕВАЯ ЧАСТЬ ─────────────────────────────────
+  .esg-hero__left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .esg-hero__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #059669;
+    color: #FFFFFF;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+
+  .esg-hero__title {
+    font-size: 52px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  // ─── ПРАВАЯ ЧАСТЬ ────────────────────────────────
+  .esg-hero__right {
+    flex: 0 0 420px;
+    padding-top: 4px;
+
+    @media (max-width: 768px) {
+      flex: 1;
+      width: 100%;
+    }
+  }
+
+  .esg-hero__quote-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 34px 26px 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .esg-hero__quote-icon {
+    position: absolute;
+    top: -14px;
+    left: -14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: #059669;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
+  }
+
+  .esg-hero__quote-text {
+    font-size: 17px;
+    color: #EFF6FF;
+    line-height: 1.75;
+    margin: 0;
+
+  }
+
+
+
+
+
+  
+// ─── КАРТОЧКИ МИССИЯ / ВИДЕНИЕ ───────────────────
+  .esg-cards {
+    padding: 40px 40px;
+  }
+
+  .esg-cards__container {
+    display: flex;
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .esg-card {
+    flex: 1;
+    border-radius: 16px;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &--light {
+      background: #F3FAF7;
+      color: #1a2b4a;
+      box-shadow: -5px 5px 5px rgba(9, 12, 15, 0.12);
+
+      .esg-card__icon {
+        background: #e2e8f0;
+        color: #1a2b4a;
+      }
+
+      .esg-card__title {
+        color: #1a2b4a;
+        font-size: 28px;
+      }
+
+      .esg-card__text {
+        color: #4a5568;
+        font-size: 18px;
+      }
+    }
+
+    &--dark {
+      background: #0d2d6b;
+      color: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: -5px 5px 5px rgba(9, 12, 15, 0.12);
+
+      // Декоративные круги как на скриншоте
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+      }
+
+      &::before {
+        width: 180px;
+        height: 180px;
+        top: -60px;
+        right: -40px;
+      }
+
+      &::after {
+        width: 120px;
+        height: 120px;
+        top: 20px;
+        right: 60px;
+      }
+
+      .esg-card__icon {
+        background: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+      }
+
+      .esg-card__title {
+        color: #ffffff;
+        font-size: 28px;
+      }
+
+      .esg-card__text {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 18px;
+      }
+    }
+  }
+
+  .esg-card__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .esg-card__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .esg-card__text {
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+
+
+
+
+// ─── GRI ──────────────────────────────────
+  .esg-gri {
+    padding: 40px 20px;
+  }
+
+  .esg-gri__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 48px 56px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding: 32px 24px;
+      gap: 32px;
+    }
+  }
+
+  .esg-gri__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .esg-gri__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #059669;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 48px;
+      height: 4px;
+      background: #059669;
+      border-radius: 2px;
+    }
+  }
+
+  .esg-gri__title {
+    font-size: clamp(24px, 3vw, 36px);
+    font-size: 37px;
+    font-weight: 800;
+    color: #003366;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .esg-gri__text {
+    font-size: 18px;
+    color: #4a5568;
+    line-height: 1.75;
+    margin: 0;
+
+    strong {
+      color: #1a2b4a;
+      font-weight: 700;
+    }
+  }
+
+  .esg-gri__tags {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+  }
+
+  .esg-gri__tag {
+    display: inline-flex;
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.12);
+    align-items: center;
+    gap: 8px;
+    padding: 20px 28px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2d3748;
+    background: #ffffff;
+
+    svg {
+      color: #059669;
+      flex-shrink: 0;
+    }
+  }
+
+  .esg-gri__link {
+    position: absolute;
+    right: 56px;
+    bottom: 48px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #059669;
+    text-decoration: none;
+    width: fit-content;
+
+    @media (max-width: 768px) {
+      position: static;
+      margin-top: 24px;
+      align-self: flex-start;
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      text-decoration: underline;
+
+      svg {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  // ─── ЛОГОТИП GRI ─────────────────────────────────
+  .esg-gri__right {
+    flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+  }
+
+  .esg-gri__logo-circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #1a4fa0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .esg-gri__logo-text {
+    font-size: 52px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-left: 70px;
+
+    @media (max-width: 768px) {
+      font-size: 38px;
+    }
+  }
+
+
+
+
+
+
+
+// // ─── СЕКЦИЯ ESG-ЦЕЛИ ─────────────────────────────
+//   .esg-goals {
+//     padding: 40px 20px 60px;
+//   }
+
+//   .esg-goals__container {
+//     max-width: 1100px;
+//     margin: 0 auto;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     gap: 48px;
+//   }
+
+//   .esg-goals__title {
+//     font-size: clamp(26px, 4vw, 42px);
+//     font-weight: 900;
+//     color: #1a2b4a;
+//     text-align: center;
+//     margin: 0;
+//   }
+
+//   .esg-goals__diagram {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     gap: 16px;
+//     width: 100%;
+
+//     @media (max-width: 900px) {
+//       flex-direction: column;
+//     }
+//   }
+
+//   // ─── КОЛОНКИ ЭЛЕМЕНТОВ ───────────────────────────
+//   .esg-goals__items {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 32px;
+//     flex: 1;
+//   }
+
+//   .esg-goals__item {
+//     display: flex;
+//     align-items: center;
+//     gap: 14px;
+
+//     &--left {
+//       flex-direction: row;
+//       text-align: right;
+//       justify-content: flex-end;
+
+//       .esg-goals__item-text {
+//         align-items: flex-end;
+//       }
+//     }
+
+//     &--right {
+//       flex-direction: row;
+//       text-align: left;
+//       justify-content: flex-start;
+
+//       .esg-goals__item-text {
+//         align-items: flex-start;
+//       }
+//     }
+//   }
+
+//   .esg-goals__item-text {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4px;
+//   }
+
+//   .esg-goals__item-title {
+//     font-size: 15px;
+//     font-weight: 800;
+//     line-height: 1.3;
+
+//     &--green  { color: #2d9d78; }
+//     &--yellow { color: #d4a017; }
+//     &--blue   { color: #1a4fa0; }
+//     &--red    { color: #e53e3e; }
+//     &--purple { color: #6b46c1; }
+//     &--orange { color: #dd6b20; }
+//   }
+
+//   .esg-goals__item-desc {
+//     font-size: 12px;
+//     color: #4a5568;
+//     line-height: 1.6;
+//     margin: 0;
+//     max-width: 200px;
+//   }
+
+//   // ─── ИКОНКИ ──────────────────────────────────────
+//   .esg-goals__icon {
+//     flex-shrink: 0;
+//     width: 48px;
+//     height: 48px;
+//     border-radius: 50%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     &--green  { background: #2d9d78; }
+//     &--yellow { background: #d4a017; }
+//     &--blue   { background: #1a4fa0; }
+//     &--red    { background: #e53e3e; }
+//     &--purple { background: #6b46c1; }
+//     &--orange { background: #dd6b20; }
+//   }
+
+//   // ─── ЦЕНТРАЛЬНАЯ SVG-ДИАГРАММА ───────────────────
+//   .esg-goals__center {
+//     flex-shrink: 0;
+//     width: 280px;
+//     height: 280px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     @media (max-width: 900px) {
+//       width: 220px;
+//       height: 220px;
+//     }
+//   }
+
+//   .esg-goals__svg {
+//     width: 100%;
+//     height: 100%;
+//   }
+
+
+
+
+// ───  НАШИ УСЛУГИ ──────────────────────────
+  .esg-services {
+    padding: 40px 20px 120px;
+  }
+
+  .esg-services__container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+
+  .esg-services__title {
+    font-size: clamp(24px, 3vw, 36px);
+    font-size: 37px;
+    font-weight: 800;
+    color: #003366;
+    margin: 0;
+  }
+
+  .esg-services__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 540px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .esg-services__card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .esg-services__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &--blue  { background: #1a4fa0; }
+    &--green { background: #2d9d78; }
+  }
+
+  .esg-services__card-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #003366;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .esg-services__card-desc {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+
+
+
+}
+
+
+
+
+
+  
