@@ -69,9 +69,9 @@ export default function AdminPanel() {
     
     try {
       const token = localStorage.getItem('access');
-      // Убираем финальный слэш, так как в Django роут Courses/<int:pk> без слэша
+      // В DRF viewsets для DELETE запросов обычно требуется слеш в конце
       const endpointBase = activeTab.endpoint.endsWith('/') ? activeTab.endpoint.slice(0, -1) : activeTab.endpoint;
-      const res = await fetch(`${API_BASE}${endpointBase}/${id}`, {
+      const res = await fetch(`${API_BASE}${endpointBase}/${id}/`, {
         method: 'DELETE',
         headers: {
           'Authorization': `JWT ${token}`
@@ -91,6 +91,7 @@ export default function AdminPanel() {
       digest: '',
       image_url: '',
       url: '',
+      lang: 'ru', // default language
       isActive: true,
     });
     setIsModalOpen(true);
@@ -124,17 +125,18 @@ export default function AdminPanel() {
       
       const endpointBase = activeTab.endpoint.endsWith('/') ? activeTab.endpoint.slice(0, -1) : activeTab.endpoint;
       const url = editItem 
-        ? `${API_BASE}${endpointBase}/${editItem.id}`
+        ? `${API_BASE}${endpointBase}/${editItem.id}/`
         : `${API_BASE}${activeTab.endpoint}`;
 
       // В зависимости от модели поле URL может называться по-разному,
       // для универсальности отправляем как есть, но бэкенд может ожидать конкретное поле
       const payload = { ...formData };
+      payload.site_url = formData.url || 'https://kbtu.edu.kz'; // required by Base model
       
       // Адаптация URL под специфичные поля
-      if (activeTab.id === 'News') payload.news_site_url = formData.url;
-      if (activeTab.id === 'Courses') payload.course_site_url = formData.url;
-      if (activeTab.id === 'Projects') payload.project_site_url = formData.url;
+      if (activeTab.id === 'News') payload.ar_site_url = formData.url;
+      if (activeTab.id === 'Courses') payload.cr_site_url = formData.url;
+      if (activeTab.id === 'Projects') payload.pr_site_url = formData.url;
       if (activeTab.id === 'Events') payload.ev_site_url = formData.url;
 
       const res = await fetch(url, {
@@ -253,9 +255,22 @@ export default function AdminPanel() {
                 <input 
                   type="text" 
                   name="url" 
-                  value={formData.url} 
+                  value={formData.url || ''} 
                   onChange={handleFormChange} 
                 />
+              </div>
+
+              <div className="form-group">
+                <label>Язык:</label>
+                <select 
+                  name="lang" 
+                  value={formData.lang || 'ru'} 
+                  onChange={handleFormChange}
+                >
+                  <option value="ru">Русский</option>
+                  <option value="kk">Казахский</option>
+                  <option value="en">Английский</option>
+                </select>
               </div>
 
               <div className="form-group checkbox-group">
