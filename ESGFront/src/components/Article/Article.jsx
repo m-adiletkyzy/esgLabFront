@@ -16,7 +16,9 @@ const Article = ({ article }) => {
   const { t, i18n } = useTranslation();
 
   const formatDate = (dateString) => {
+    if (!dateString) return "";
     const date = new Date(dateString);
+    if (isNaN(date)) return "";
     const formatter = new Intl.DateTimeFormat(i18n.language, {
       day: "numeric",
       month: "long",
@@ -71,7 +73,7 @@ const Article = ({ article }) => {
         >
           {t(tag.labelKey)}
         </span>
-        <span className="nc-card__date">{formatDate(article.ar_date)}</span>
+        <span className="nc-card__date">{formatDate(article.ar_date || article.pars_date || article.event_date)}</span>
       </div>
 
       <h3 className="nc-card__title">{article.title}</h3>
