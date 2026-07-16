@@ -3,7 +3,7 @@ import './AdminPanel.scss';
 import { useAuth } from '../AuthPage/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE = 'http://127.0.0.1:8000/api/v1';
+const API_BASE = '/api/v1';
 
 const TABS = [
   { id: 'News', label: 'Новости', endpoint: '/admin/news/' },
